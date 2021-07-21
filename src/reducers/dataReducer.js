@@ -7,15 +7,15 @@ const initialState = {
 }
 
 export default function dataActions(state = {...initialState}, action){
+    var payload = "";
+    var currentNumber="";
     switch(action.type){
         case ADD_ITEM:
 
-            var payload = action.payload;
-            console.log(payload);
-            console.log(state);
+            payload = action.payload;
             var items = state.items;
-            var currentNumber = payload.number;
-            
+            currentNumber = payload.number;
+
             items.push(currentNumber);
             var images = [];
             for(var i = 1; i<= currentNumber; i++){
@@ -33,8 +33,8 @@ export default function dataActions(state = {...initialState}, action){
                 images
             }
         case CURRENT_ITEM:
-            var payload = action.payload;
-            var currentNumber = payload.number;
+            payload = action.payload;
+            currentNumber = payload.number;
             return {
                 ...state,
                 currentNumber
@@ -47,5 +47,4 @@ export default function dataActions(state = {...initialState}, action){
         default:
             return state;
     }
-    return state;
 }
