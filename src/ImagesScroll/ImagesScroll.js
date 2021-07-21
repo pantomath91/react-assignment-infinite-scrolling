@@ -90,10 +90,6 @@ function ImagesScroll() {
         intObs.observe(node);
     }, []);
 
-    const gotoLogin = () => {
-
-    }
-
     useEffect(() => {
         imagesRef.current = document.querySelectorAll(".card-img-top");
 
