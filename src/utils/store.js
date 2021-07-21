@@ -1,7 +1,4 @@
-import {createStore, combineReducers, applyMiddleware} from "redux";
-
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from "redux-thunk";
+import {createStore, combineReducers} from "redux";
 import loginReducer from '../reducers/loginReducer';
 import dataReducer from '../reducers/dataReducer';
 import { persistStore, persistReducer } from 'redux-persist';

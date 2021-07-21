@@ -18,5 +18,4 @@ export default function loginActions(state = {...initialState}, action){
         default:
             return state;
     }
-    return state;
 }
